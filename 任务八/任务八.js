@@ -1,12 +1,11 @@
+var denglu = document.getElementById("denglu");
 var time = document.getElementById("time");
+var catalog = document.getElementById("catalog");
+var catalogimg = catalog.getElementsByTagName("img");
 var banner = document.getElementById("banner");
-// var bannerimglist = banner.getElementsByClassName("banner-img");
 var bannerimg = document.getElementById("bannerimg");
 var bannermove = document.getElementsByClassName("banner-move");
 var bannerdot = document.getElementsByClassName("banner-dot");
-var next = document.getElementById("next");
-var prev = document.getElementById("prev");
-
 var hanfuimg1 = document.getElementById("hanfuimg1");
 var hanfuimg2 = document.getElementById("hanfuimg2");
 var lolitaimg1 = document.getElementById("lolitaimg1");
@@ -14,6 +13,16 @@ var lolitaimg2 = document.getElementById("lolitaimg2");
 var jkimg1 = document.getElementById("jkimg1");
 var jkimg2 = document.getElementById("jkimg2");
 
+//点击登录弹出账户密码框
+denglu.onclick = function(){
+    var a = window.prompt("账户：");
+    var b = window.prompt("密码：");
+    if(a.value != "" && b.value != ""){
+        alert("登陆成功！");
+    }else{
+        alert("登录失败！");
+    }
+}
 
 //生成现在日期时间的函数
 function convertTime(timer){
@@ -38,46 +47,27 @@ var nowtime = setInterval(function(){
 },1000);
 
 
+//点击目录页面滚动到相应位置
+catalogimg[0].onclick = function(){
+    document.documentElement.scrollTop = 1370;
+}
+catalogimg[1].onclick = function(){
+    document.documentElement.scrollTop = 2330;
+}
+catalogimg[2].onclick = function(){
+    document.documentElement.scrollTop = 1850;
+}
+
 //轮播
 var arrimg = ["./images/jk1.png","./images/lolita1.png", "./images/hanfu1.png"]
-var num = 1;
+var num = 0;
 setInterval(function(){
     bannerimg.src = arrimg[num];
     num++;
     if(num == arrimg.length){
-        num = 1;
+        num = 0;
     }
 },3000);
-
-
-
-//点击左箭头
-
-
-//点击右箭头
-
-
-
-
-
-//定义轮播定位函数
-// function locationbanner(imgs,len){
-//     imgs.style.display = "block";
-//     imgs.style.top = "510px";
-// }
-// var banners = setInterval(function(){
-//     for(var i = 1; i < imglist.length; i++){
-//         imglist[i].style.display = "block";
-//         imglist[i].style.top = "510px";
-//     }
-// },3000);
-
-
-
-
-
-
-
 
 //classify的图片移动
 var i = 1;

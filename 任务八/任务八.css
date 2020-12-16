@@ -76,6 +76,31 @@ body{
 	height:180px;
 
 }
+.catalogbox{
+	background-color:white;
+	padding-left: 100px;
+	margin: auto;
+}
+.catalog{
+	width:1200px;
+	position: relative;
+	left:200px;
+}
+.catalog img:hover{
+	cursor:pointer;
+}
+
+
+
+
+.catalog img{
+	widows: 280px;
+	height:280px;
+	overflow: hidden;
+	margin-left: 30px;
+	/* position: relative; 
+	padding-left: 30px; */
+}
 form{
 	float:right;
 }
@@ -139,34 +164,6 @@ form{
 	/* display: none; */
 	float: left;
 }
-/* img{
-	width: 100%;
-	height: 100%;
-} */
-
-.prev,
-.next {
-	width: 50px;
-	height: 50px;
-	position: absolute;
-	top:580px;
-	opacity: 0.5;
-}
-
-.next {
-	right: 0px;
-
-}
-
-.next:hover {
-	opacity: 1;
-}
-
-.prev:hover {
-	opacity: 1;
-}
-
-
 
 
 
@@ -300,7 +297,7 @@ form{
 	color:red;
 	text-decoration:underline;
 }
-ul  .attention:{ 
+ul  .attention{ 
 	margin-left:50px;
 }
 .last{
